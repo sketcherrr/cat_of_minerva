@@ -1,0 +1,22 @@
+---
+/* 可通过 <Comments theme="preferred_color_scheme" /> 传入主题 */
+const { theme = 'preferred_color_scheme' } = Astro.props;
+---
+<section id="comments" class="my-12">
+    <script src="https://giscus.app/client.js"
+            data-repo="sketcherrr/cat_of_minerva"
+            data-repo-id="R_kgDOPiTZwQ"
+            data-category="General"
+            data-category-id="DIC_kwDOPiTZwc4CueH7"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            crossorigin="anonymous"
+            async>
+    </script>
+  <noscript>请启用 JavaScript 以查看评论。</noscript>
+</section>
