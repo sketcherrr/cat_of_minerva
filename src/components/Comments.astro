@@ -1,20 +1,21 @@
 ---
 /* 可通过 <Comments theme="preferred_color_scheme" /> 传入主题 */
+import { GISCUS_REPO, GISCUS_REPO_ID, GISCUS_CATEGORY, GISCUS_CATEGORY_ID, GISCUS_LANG } from "../consts";
 const { theme = 'preferred_color_scheme' } = Astro.props;
 ---
 <section id="comments" class="my-12">
     <script src="https://giscus.app/client.js"
-            data-repo="sketcherrr/cat_of_minerva"
-            data-repo-id="R_kgDOPiTZwQ"
-            data-category="General"
-            data-category-id="DIC_kwDOPiTZwc4CueH7"
+            data-repo={GISCUS_REPO}
+            data-repo-id={GISCUS_REPO_ID}
+            data-category={GISCUS_CATEGORY}
+            data-category-id={GISCUS_CATEGORY_ID}
             data-mapping="pathname"
             data-strict="0"
             data-reactions-enabled="1"
             data-emit-metadata="0"
             data-input-position="bottom"
-            data-theme="preferred_color_scheme"
-            data-lang="zh-CN"
+            data-theme={theme}
+            data-lang={GISCUS_LANG}
             crossorigin="anonymous"
             async>
     </script>
