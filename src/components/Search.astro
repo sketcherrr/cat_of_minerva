@@ -1,0 +1,46 @@
+---
+const isDev = import.meta.env.DEV;
+---
+
+{!isDev ? (
+  <>
+    <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+    <div id="search" class="search"></div>
+    <script src="/pagefind/pagefind-ui.js" defer></script>
+    <script is:inline>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (window.PagefindUI) {
+          // Initialize Pagefind UI with sensible defaults
+          new window.PagefindUI({
+            element: '#search',
+            showImages: true,
+            showSubResults: true,
+            pageSize: 8,
+            autofocus: true,
+          });
+        }
+      });
+    </script>
+  </>
+) : (
+  <div class="search placeholder" role="status" aria-live="polite">
+    Search is available in preview/build (run `npm run build` then `npm run preview`).
+  </div>
+)}
+
+<style>
+  .search {
+    margin: 1rem 0 2rem;
+  }
+  .search.placeholder {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: rgba(var(--accent), 0.08);
+    color: rgb(var(--gray));
+    font-size: 0.95rem;
+  }
+  @media (max-width: 720px) {
+    .search { margin: 0.5rem 0 1rem; }
+  }
+</style>
+

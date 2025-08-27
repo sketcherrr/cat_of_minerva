@@ -5,7 +5,7 @@ export const SITE_TITLE = 'Astro Blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
 
 // Site author (used in footer)
-export const AUTHOR_NAME = 'Your Name';
+export const AUTHOR_NAME = 'Voyager';
 
 // Giscus configuration (customize for your repo)
 export const GISCUS_REPO = 'sketcherrr/cat_of_minerva';
