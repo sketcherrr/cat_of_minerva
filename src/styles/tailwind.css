@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
 
 /* If you plan to use prose classes, install typography plugin
    and uncomment the next line: npm i -D @tailwindcss/typography */
